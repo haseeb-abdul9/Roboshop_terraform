@@ -6,7 +6,9 @@ resource "aws_instance" "frontend" {
     Name = "01_frontend"
   }
 }
-
+output "frontend" {
+  value = aws_instance.frontend.private_ip
+}
 
 resource "aws_instance" "mongodb" {
   ami           = "ami-0f3c7d07486cad139"
