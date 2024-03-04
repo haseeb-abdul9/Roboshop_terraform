@@ -1,4 +1,4 @@
-resource "aws_instance" "01_frontend" {
+resource "aws_instance" "frontend" {
   ami           = "ami-0f3c7d07486cad139"
   instance_type = "t3.micro"
 
@@ -8,7 +8,7 @@ resource "aws_instance" "01_frontend" {
 }
 
 
-resource "aws_instance" "02_mongodb" {
+resource "aws_instance" "mongodb" {
   ami           = "ami-0f3c7d07486cad139"
   instance_type = "t3.micro"
 
@@ -17,7 +17,7 @@ resource "aws_instance" "02_mongodb" {
   }
 }
 
-resource "aws_instance" "03_catalogue" {
+resource "aws_instance" "catalogue" {
   ami           = "ami-0f3c7d07486cad139"
   instance_type = "t3.micro"
 
@@ -26,7 +26,7 @@ resource "aws_instance" "03_catalogue" {
   }
 }
 
-resource "aws_instance" "04_redis" {
+resource "aws_instance" "redis" {
   ami           = "ami-0f3c7d07486cad139"
   instance_type = "t3.micro"
 
@@ -35,7 +35,7 @@ resource "aws_instance" "04_redis" {
   }
 }
 
-resource "aws_instance" "05_user" {
+resource "aws_instance" "user" {
   ami           = "ami-0f3c7d07486cad139"
   instance_type = "t3.micro"
 
@@ -44,7 +44,7 @@ resource "aws_instance" "05_user" {
   }
 }
 
-resource "aws_instance" "06_cart" {
+resource "aws_instance" "cart" {
   ami           = "ami-0f3c7d07486cad139"
   instance_type = "t3.micro"
 
@@ -53,7 +53,7 @@ resource "aws_instance" "06_cart" {
   }
 }
 
-resource "aws_instance" "07_mysql" {
+resource "aws_instance" "mysql" {
   ami           = "ami-0f3c7d07486cad139"
   instance_type = "t3.micro"
 
@@ -62,7 +62,7 @@ resource "aws_instance" "07_mysql" {
   }
 }
 
-resource "aws_instance" "08_shipping" {
+resource "aws_instance" "shipping" {
   ami           = "ami-0f3c7d07486cad139"
   instance_type = "t3.micro"
 
@@ -71,7 +71,7 @@ resource "aws_instance" "08_shipping" {
   }
 }
 
-resource "aws_instance" "09_rabbitMQ" {
+resource "aws_instance" "abbitMQ" {
   ami           = "ami-0f3c7d07486cad139"
   instance_type = "t3.micro"
 
@@ -80,7 +80,7 @@ resource "aws_instance" "09_rabbitMQ" {
   }
 }
 
-resource "aws_instance" "10_payment" {
+resource "aws_instance" "payment" {
   ami           = "ami-0f3c7d07486cad139"
   instance_type = "t3.micro"
 
@@ -89,7 +89,7 @@ resource "aws_instance" "10_payment" {
   }
 }
 
-resource "aws_instance" "11_dispatch" {
+resource "aws_instance" "dispatch" {
   ami           = "ami-0f3c7d07486cad139"
   instance_type = "t3.micro"
 
