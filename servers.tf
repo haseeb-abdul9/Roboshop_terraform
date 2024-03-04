@@ -10,6 +10,14 @@ output "frontend" {
   value = aws_instance.frontend.private_ip
 }
 
+data "aws_ami" "centOS" {
+  owners      = ["973714476881"]
+  most_recent = true
+  name_regex  = "Centos-8-DevOps-Practice"
+}
+output "ami" {
+  value = data.aws_ami.centOS.image_id
+}
 resource "aws_instance" "mongodb" {
   ami           = "ami-0f3c7d07486cad139"
   instance_type = "t3.micro"
