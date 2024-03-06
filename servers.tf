@@ -50,7 +50,7 @@ variable "components" {
       name = "payment"
       instance_type = "t3.micro"
     }
-    disoatch ={
+    dispatch ={
       name = "dispatch"
       instance_type = "t3.micro"
     }
