@@ -12,47 +12,47 @@ variable "components" {
   default = {
     frontend ={
       name = "01_frontend"
-      instance_tyoe = "t3.micro"
+      instance_type = "t3.micro"
     }
     mongodb ={
       name = "02_mongodb"
-      instance_tyoe = "t3.micro"
+      instance_type = "t3.micro"
     }
     Catalogue ={
       name = "03_catalogue"
-      instance_tyoe = "t3.micro"
+      instance_type = "t3.micro"
     }
     redis ={
       name = "04_redis"
-      instance_tyoe = "t3.micro"
+      instance_type = "t3.micro"
     }
     user ={
       name = "05_user"
-      instance_tyoe = "t3.micro"
+      instance_type = "t3.micro"
     }
     cart ={
       name = "06_cart"
-      instance_tyoe = "t3.micro"
+      instance_type = "t3.micro"
     }
     mysql ={
       name = "07_mysql"
-      instance_tyoe = "t3.micro"
+      instance_type = "t3.micro"
     }
     shipping ={
       name = "08_shipping"
-      instance_tyoe = "t3.micro"
+      instance_type = "t3.micro"
     }
     rabbitmq ={
       name = "09_rabbitmq"
-      instance_tyoe = "t3.micro"
+      instance_type = "t3.micro"
     }
     payment ={
       name = "10_payment"
-      instance_tyoe = "t3.micro"
+      instance_type = "t3.micro"
     }
     disoatch ={
       name = "11_dispatch"
-      instance_tyoe = "t3.micro"
+      instance_type = "t3.micro"
     }
   }
 }
