@@ -11,47 +11,47 @@ data "aws_security_group" "allow_all" {
 variable "components" {
   default = {
     frontend ={
-      name = "01_frontend"
+      name = "frontend"
       instance_type = "t3.micro"
     }
     mongodb ={
-      name = "02_mongodb"
+      name = "mongodb"
       instance_type = "t3.micro"
     }
     Catalogue ={
-      name = "03_catalogue"
+      name = "catalogue"
       instance_type = "t3.micro"
     }
     redis ={
-      name = "04_redis"
+      name = "redis"
       instance_type = "t3.micro"
     }
     user ={
-      name = "05_user"
+      name = "user"
       instance_type = "t3.micro"
     }
     cart ={
-      name = "06_cart"
+      name = "cart"
       instance_type = "t3.micro"
     }
     mysql ={
-      name = "07_mysql"
+      name = "mysql"
       instance_type = "t3.micro"
     }
     shipping ={
-      name = "08_shipping"
+      name = "shipping"
       instance_type = "t3.micro"
     }
     rabbitmq ={
-      name = "09_rabbitmq"
+      name = "rabbitmq"
       instance_type = "t3.micro"
     }
     payment ={
-      name = "10_payment"
+      name = "payment"
       instance_type = "t3.micro"
     }
     disoatch ={
-      name = "11_dispatch"
+      name = "dispatch"
       instance_type = "t3.micro"
     }
   }
