@@ -9,7 +9,6 @@ data "aws_security_group" "allow_all" {
 }
 
 variable "components" {
-  default = {
     frontend ={
       name = "frontend"
       instance_type = "t3.micro"
