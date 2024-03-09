@@ -18,7 +18,7 @@ variable "components" {
       name = "mongodb"
       instance_type = "t3.micro"
     }
-    Catalogue ={
+    catalogue ={
       name = "catalogue"
       instance_type = "t3.micro"
     }
@@ -50,7 +50,7 @@ variable "components" {
       name = "payment"
       instance_type = "t3.micro"
     }
-    disoatch ={
+    dispatch ={
       name = "dispatch"
       instance_type = "t3.micro"
     }
@@ -69,7 +69,7 @@ resource "aws_instance" "instance" {
   }
 }
 
-resource "aws_route53_record" "frontend" {
+resource "aws_route53_record" "records" {
   for_each = var.components
   zone_id = "Z07904683H2P61IIEYSB9"
   name    = "${each.value["name"]}-dev.haseebdevops.online"
