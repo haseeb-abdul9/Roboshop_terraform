@@ -9,51 +9,49 @@ data "aws_security_group" "allow_all" {
 }
 
 variable "components" {
-  default = {
-    frontend ={
-      name = "frontend"
-      instance_type = "t3.micro"
-    }
-    mongodb ={
-      name = "mongodb"
-      instance_type = "t3.micro"
-    }
-    Catalogue ={
-      name = "catalogue"
-      instance_type = "t3.micro"
-    }
-    redis ={
-      name = "redis"
-      instance_type = "t3.micro"
-    }
-    user ={
-      name = "user"
-      instance_type = "t3.micro"
-    }
-    cart ={
-      name = "cart"
-      instance_type = "t3.micro"
-    }
-    mysql ={
-      name = "mysql"
-      instance_type = "t3.micro"
-    }
-    shipping ={
-      name = "shipping"
-      instance_type = "t3.micro"
-    }
-    rabbitmq ={
-      name = "rabbitmq"
-      instance_type = "t3.micro"
-    }
-    payment ={
-      name = "payment"
-      instance_type = "t3.micro"
-    }
-    dispatch ={
-      name = "dispatch"
-      instance_type = "t3.micro"
-    }
+  frontend ={
+    name = "frontend"
+    instance_type = "t3.micro"
+  }
+  mongodb ={
+    name = "mongodb"
+    instance_type = "t3.micro"
+  }
+  Catalogue ={
+    name = "catalogue"
+    instance_type = "t3.micro"
+  }
+  redis ={
+    name = "redis"
+    instance_type = "t3.micro"
+  }
+  user ={
+    name = "user"
+    instance_type = "t3.micro"
+  }
+  cart ={
+    name = "06_cart"
+    instance_type = "t3.micro"
+  }
+  mysql ={
+    name = "07_mysql"
+    instance_type = "t3.micro"
+  }
+  shipping ={
+    name = "08_shipping"
+    instance_type = "t3.micro"
+  }
+  rabbitmq ={
+    name = "09_rabbitmq"
+    instance_type = "t3.micro"
+  }
+  payment ={
+    name = "10_payment"
+    instance_type = "t3.micro"
+  }
+  disoatch ={
+    name = "11_dispatch"
+    instance_type = "t3.micro"
   }
 }
 
@@ -69,7 +67,7 @@ resource "aws_instance" "instance" {
   }
 }
 
-resource "aws_route53_record" "records" {
+resource "aws_route53_record" "frontend" {
   for_each = var.components
   zone_id = "Z07904683H2P61IIEYSB9"
   name    = "${each.value["name"]}-dev.haseebdevops.online"
