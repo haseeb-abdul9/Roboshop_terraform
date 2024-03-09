@@ -1,7 +1,3 @@
 terraform {
-  backend "s3" {
-    bucket = "terraform-ah-m"
-    key    = "roboshop/dev/terrform.tfstate"
-    region = "us-east-1"
-  }
+  backend "s3" {}
 }
