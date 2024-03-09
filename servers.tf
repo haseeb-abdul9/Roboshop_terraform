@@ -9,49 +9,51 @@ data "aws_security_group" "allow_all" {
 }
 
 variable "components" {
-  frontend ={
-    name = "frontend"
-    instance_type = "t3.micro"
-  }
-  mongodb ={
-    name = "mongodb"
-    instance_type = "t3.micro"
-  }
-  Catalogue ={
-    name = "catalogue"
-    instance_type = "t3.micro"
-  }
-  redis ={
-    name = "redis"
-    instance_type = "t3.micro"
-  }
-  user ={
-    name = "user"
-    instance_type = "t3.micro"
-  }
-  cart ={
-    name = "06_cart"
-    instance_type = "t3.micro"
-  }
-  mysql ={
-    name = "07_mysql"
-    instance_type = "t3.micro"
-  }
-  shipping ={
-    name = "08_shipping"
-    instance_type = "t3.micro"
-  }
-  rabbitmq ={
-    name = "09_rabbitmq"
-    instance_type = "t3.micro"
-  }
-  payment ={
-    name = "10_payment"
-    instance_type = "t3.micro"
-  }
-  disoatch ={
-    name = "11_dispatch"
-    instance_type = "t3.micro"
+  default = {
+    frontend ={
+      name = "frontend"
+      instance_type = "t3.micro"
+    }
+    mongodb ={
+      name = "mongodb"
+      instance_type = "t3.micro"
+    }
+    Catalogue ={
+      name = "catalogue"
+      instance_type = "t3.micro"
+    }
+    redis ={
+      name = "redis"
+      instance_type = "t3.micro"
+    }
+    user ={
+      name = "user"
+      instance_type = "t3.micro"
+    }
+    cart ={
+      name = "06_cart"
+      instance_type = "t3.micro"
+    }
+    mysql ={
+      name = "07_mysql"
+      instance_type = "t3.micro"
+    }
+    shipping ={
+      name = "08_shipping"
+      instance_type = "t3.micro"
+    }
+    rabbitmq ={
+      name = "09_rabbitmq"
+      instance_type = "t3.micro"
+    }
+    payment ={
+      name = "10_payment"
+      instance_type = "t3.micro"
+    }
+    disoatch ={
+      name = "11_dispatch"
+      instance_type = "t3.micro"
+    }
   }
 }
 
