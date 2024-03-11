@@ -25,7 +25,7 @@ resource "null_resource" "provisioner" {
       "rm -rf roboshop_shell",
       "git clone https://github.com/haseeb-abdul9/roboshop_shell.git}",
       "cd roboshop_shell",
-      "sudo bash ${each.value["name"]}.sh"
+      "sudo bash ${each.value["name"]}.sh ${lookup(each.value, password, "null")}"
     ]
   }
 }
@@ -38,3 +38,4 @@ resource "aws_route53_record" "records" {
   ttl     = 25
   records = [aws_instance.instance[each.value["name"]].private_ip]
 }
+
