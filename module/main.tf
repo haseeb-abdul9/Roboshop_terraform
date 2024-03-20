@@ -23,14 +23,14 @@ resource "null_resource" "provisioner" {
       "rm -rf roboshop_shell",
       "git clone https://github.com/haseeb-abdul9/roboshop_shell.git",
       "cd roboshop_shell",
-      "sudo bash var.component_name.sh var.password"
+      "sudo bash ${var.component_name}.sh ${var.password}"
     ]
   }
 }
 
 resource "aws_route53_record" "records" {
   zone_id = "Z07904683H2P61IIEYSB9"
-  name    = "var.components-dev.haseebdevops.online"
+  name    = "${var.component_name}-dev.haseebdevops.online"
   type    = "A"
   ttl     = 25
   records = [aws_instance.instance.private_ip]
