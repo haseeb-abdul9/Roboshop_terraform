@@ -25,7 +25,7 @@ db_servers = {
   }
 }
 
-app_server = {
+app_servers = {
   frontend ={
     name = "frontend"
     instance_type = "t3.micro"
