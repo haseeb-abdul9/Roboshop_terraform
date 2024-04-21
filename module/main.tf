@@ -82,7 +82,7 @@ resource "aws_iam_role_policy" "ssm_ps_policy" {
       {
         "Sid": "VisualEditor1",
         "Effect": "Allow",
-        "Action": "ssm:DescribeParameters",
+        "Action": "ssm:Decrypt",
         "Resource": "*"
       },
     ]
