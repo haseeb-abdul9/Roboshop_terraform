@@ -60,7 +60,7 @@ resource "aws_iam_instance_profile" "instance_profile" {
 }
 
 resource "aws_iam_role_policy" "ssm_ps_policy" {
-  name = "test_policy"
+  name = "${var.component_name}-${var.env}-ssm-ps-policy"
   role = aws_iam_role.role.id
 
   policy = jsonencode({
@@ -70,21 +70,15 @@ resource "aws_iam_role_policy" "ssm_ps_policy" {
         "Sid": "VisualEditor0",
         "Effect": "Allow",
         "Action": [
+          "kms:Decrypt",
           "ssm:GetParameterHistory",
           "ssm:GetParametersByPath",
           "ssm:GetParameters",
           "ssm:GetParameter",
-          "kms:GetParametersForImport",
-          "kms:Decrypt"
+          "kms:GetParametersForImport"
         ],
         "Resource": "arn:aws:ssm:us-east-1:018632729566:parameter/${var.env}.${var.component_name}.*"
-      },
-      {
-        "Sid": "VisualEditor1",
-        "Effect": "Allow",
-        "Action": "ssm:Decrypt",
-        "Resource": "*"
-      },
+      }
     ]
   })
 }
