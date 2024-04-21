@@ -54,7 +54,7 @@ resource "aws_iam_role" "role" {
 }
 
 resource "aws_iam_role_policy" "ssm_ps_policy" {
-  name = "${var.component_name}-${var.env}-policy"
+  name = "test_policy"
   role = aws_iam_role.role.id
 
   policy = jsonencode({
@@ -69,17 +69,15 @@ resource "aws_iam_role_policy" "ssm_ps_policy" {
           "ssm:GetParameters",
           "ssm:GetParameter"
         ],
-        "Resource": "arn:aws:ssm:us-east-1:018632729566:parameter/${var.env}.${var.component_name}.*"
+        "Resource": "arn:aws:ssm:us-east-1:018632729566:parameter/${var.env}.${var.env}.${var.component_name}.*"
       },
       {
         "Sid": "VisualEditor1",
         "Effect": "Allow",
         "Action": "ssm:DescribeParameters",
         "Resource": "*"
-      }
+      },
     ]
+  })
 }
-
-
-
 
