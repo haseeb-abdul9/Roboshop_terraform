@@ -84,7 +84,7 @@ resource "aws_iam_role_policy" "ssm_ps_policy" {
         "Effect": "Allow",
         "Action": "ssm:Decrypt",
         "Resource": "*"
-      }
+      },
     ]
   })
 }
