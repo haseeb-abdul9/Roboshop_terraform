@@ -6,3 +6,4 @@ variable "password" {}
 variable "provisioners" {
   default = false
 }
+variable "server_type" {}
