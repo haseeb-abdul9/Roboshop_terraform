@@ -20,12 +20,7 @@ resource "null_resource" "provisioner" {
       host     = aws_instance.instance.private_ip
     }
 
-    inline = [
-      "rm -rf roboshop_shell",
-      "git clone https://github.com/haseeb-abdul9/roboshop_shell.git",
-      "cd roboshop_shell",
-      "sudo bash ${var.component_name}.sh ${var.password}"
-    ]
+    inline = var.server_type == "db" ? local.db_commands : local.app_commands
   }
 }
 
