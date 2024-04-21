@@ -1,8 +1,8 @@
 locals {
   Name = var.env!=""? "${var.component_name}-${var.env}" : var.component_name
   db_commands = [
-    "git clone https://github.com/haseeb-abdul9/roboshop_shell.git",
     "rm -rf roboshop_shell",
+    "git clone https://github.com/haseeb-abdul9/roboshop_shell.git",
     "cd roboshop_shell",
     "sudo bash ${var.component_name}.sh ${var.password}"
   ]
