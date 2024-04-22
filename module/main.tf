@@ -109,12 +109,6 @@ resource "aws_iam_role_policy" "ssm_ps_policy" {
                 "arn:aws:ssm:us-east-1:018632729566:parameter/dev.frontend.*",
                 "arn:aws:kms:us-east-1:018632729566:key/4d59713b-3f51-4512-9a87-148078194b87"
             ]
-        },
-        {
-            "Sid": "VisualEditor1",
-            "Effect": "Allow",
-            "Action": "ssm:DescribeParameters",
-            "Resource": "*"
         }
     ]
 })
