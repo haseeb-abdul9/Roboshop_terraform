@@ -28,7 +28,7 @@ db_servers = {
 app_servers = {
   frontend ={
     name = "frontend"
-    instance_type = "t3.micro"
+    instance_type = "t3.medium"
   }
   catalogue ={
     name = "catalogue"
