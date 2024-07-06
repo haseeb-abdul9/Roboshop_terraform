@@ -73,7 +73,6 @@ resource "aws_iam_role_policy" "ssm_ps_policy" {
             "Sid": "VisualEditor0",
             "Effect": "Allow",
             "Action": [
-              "ec2:DescribeTags",
               "kms:Decrypt",
               "ssm:GetParameterHistory",
               "ssm:GetParametersByPath",
