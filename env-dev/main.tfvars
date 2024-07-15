@@ -44,7 +44,7 @@ app_servers = {
   }
   shipping ={
     name = "shipping"
-    instance_type = "t3.medium"
+    instance_type = "t3.large"
     password = "Roboshop@1"
   }
   payment ={
